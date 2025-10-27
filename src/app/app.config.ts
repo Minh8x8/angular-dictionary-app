@@ -7,7 +7,6 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 
 import { routes } from './app.routes';
-import { httpErrorInterceptor } from './core/api/interceptors/http-error';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,6 +18,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
 
     // ✅ HTTP client + global error interceptor
-    provideHttpClient(withInterceptors([httpErrorInterceptor])),
+    provideHttpClient(),
   ],
 };
