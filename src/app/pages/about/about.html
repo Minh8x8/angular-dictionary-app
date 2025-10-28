@@ -1,1 +1,64 @@
-<p>about works!</p>
+<section class="px-4 py-10 sm:py-12">
+  <div class="max-w-4xl mx-auto space-y-8">
+    <header>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">About this project</h1>
+      <p class="mt-2 text-gray-600 dark:text-gray-300">
+        A lightweight English dictionary app that lets you look up meanings, pronunciations,
+        synonyms, antonyms, and sources—fast.
+      </p>
+    </header>
+
+    <section
+      class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5"
+    >
+      <h2 class="text-xl font-semibold mb-2">Project overview</h2>
+      <div class="space-y-3 text-gray-700 dark:text-gray-200">
+        <p>
+          Type a word to see definitions grouped by part of speech, multiple phonetics with audio,
+          and quick links via synonyms/antonyms. The page layout stays clean and accessible with
+          native control flow and Angular Signals.
+        </p>
+        <ul class="list-disc ml-5">
+          <li>
+            Cambridge‑like reading experience: word → phonetics → meanings → synonyms/antonyms →
+            sources
+          </li>
+          <li>Pronunciation pills with per‑phonetic audio</li>
+          <li>“Show more definitions” toggle when there are many results</li>
+          <li>Dark/light theme with PrimeNG Aura theme</li>
+        </ul>
+      </div>
+    </section>
+
+    <section
+      class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5"
+    >
+      <h2 class="text-xl font-semibold mb-3">Technology stack</h2>
+      <div class="flex flex-wrap gap-2">
+        <p-chip label="Angular (Standalone, Signals)"></p-chip>
+        <p-chip label="TypeScript"></p-chip>
+        <p-chip label="PrimeNG + Aura"></p-chip>
+        <p-chip label="Tailwind CSS"></p-chip>
+        <p-chip label="RxJS"></p-chip>
+      </div>
+    </section>
+
+    <section
+      class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-5"
+    >
+      <h2 class="text-xl font-semibold mb-2">License & acknowledgment</h2>
+      <p class="text-gray-700 dark:text-gray-200">
+        Dictionary data is provided by
+        <a
+          href="https://dictionaryapi.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="underline hover:no-underline"
+          style="color: var(--p-primary-color)"
+        >
+          dictionaryapi.dev </a
+        >. All rights for data/content belong to their respective owners.
+      </p>
+    </section>
+  </div>
+</section>
