@@ -1,1 +1,41 @@
-<p>synonym-antonym-list.component works!</p>
+<div class="space-y-3">
+  @if (synonyms()?.length) {
+  <div class="space-y-1">
+    <span class="text-sm text-gray-600 dark:text-gray-300">Synonyms:</span>
+    <div class="flex gap-2 flex-wrap">
+      @for (s of synonyms()!; track s) {
+      <p-chip
+        [label]="s"
+        [style]="{ cursor: 'pointer' }"
+        styleClass="hover:opacity-90"
+        (click)="go(s)"
+        (keydown.enter)="go(s)"
+        (keydown.space)="go(s)"
+        [attr.tabindex]="0"
+        [attr.role]="'button'"
+        [attr.aria-label]="'Go to ' + s"
+      ></p-chip>
+      }
+    </div>
+  </div>
+  } @if (antonyms()?.length) {
+  <div class="space-y-1">
+    <span class="text-sm text-gray-600 dark:text-gray-300">Antonyms:</span>
+    <div class="flex gap-2 flex-wrap">
+      @for (a of antonyms()!; track a) {
+      <p-chip
+        [label]="a"
+        [style]="{ cursor: 'pointer' }"
+        styleClass="p-chip-danger hover:opacity-90"
+        (click)="go(a)"
+        (keydown.enter)="go(a)"
+        (keydown.space)="go(a)"
+        [attr.tabindex]="0"
+        [attr.role]="'button'"
+        [attr.aria-label]="'Go to ' + a"
+      ></p-chip>
+      }
+    </div>
+  </div>
+  }
+</div>

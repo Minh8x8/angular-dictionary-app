@@ -1,1 +1,29 @@
-<p>word-header.component works!</p>
+<div class="py-4">
+  <h1 class="text-3xl font-semibold">{{ entry().word }}</h1>
+  @if (entry().phonetics.length) {
+  <div class="mt-2 flex flex-wrap items-center gap-2 text-gray-700 dark:text-gray-200">
+    @for (p of entry().phonetics; let i = $index; track i) {
+    <div
+      class="inline-flex items-center gap-1 rounded-full border border-slate-300 dark:border-slate-600 px-2 h-7 whitespace-nowrap"
+    >
+      @if (p.text) {
+      <span class="text-sm leading-none">/{{ p.text }}/</span>
+      } @if (p.audio) {
+      <button
+        type="button"
+        class="inline-flex items-center justify-center h-5 w-5 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700"
+        (click)="playAudio(p.audio)"
+        aria-label="Play pronunciation"
+      >
+        <i class="pi pi-volume-up text-[0.9rem]"></i>
+      </button>
+      } @else {
+      <span class="inline-flex items-center justify-center h-5 w-5 rounded-full opacity-60">
+        <i class="pi pi-volume-off text-[0.9rem]" aria-hidden="true"></i>
+      </span>
+      }
+    </div>
+    }
+  </div>
+  }
+</div>

@@ -1,1 +1,20 @@
-<p>english-word.page works!</p>
+<div class="container mx-auto max-w-4xl py-4 relative" [attr.aria-busy]="loading()">
+  @if (loading()) {
+  <!-- Viewport-centered spinner, header/footer remain visible; interactions allowed underneath -->
+  <div
+    class="fixed left-0 right-0 top-[var(--app-header-h,64px)] bottom-[var(--app-footer-h,96px)] z-40 flex items-center justify-center pointer-events-none"
+    role="status"
+    aria-label="Loading"
+  >
+    <p-progressSpinner class="pointer-events-auto" ariaLabel="Loading"></p-progressSpinner>
+  </div>
+  } @if (error()) {
+  <p-message severity="error" [text]="error()!"></p-message>
+  } @if (hasData()) {
+  <p-card class="shadow-sm">
+    <app-word-header [entry]="firstEntry()!" />
+    <app-entry-list [meanings]="meanings()" />
+    <app-source-footer [urls]="sourceUrls()" />
+  </p-card>
+  }
+</div>

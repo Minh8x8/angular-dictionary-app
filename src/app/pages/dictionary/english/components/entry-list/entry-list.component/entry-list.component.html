@@ -1,1 +1,3 @@
-<p>entry-list.component works!</p>
+@for (m of meanings(); track m.partOfSpeech) {
+<app-meaning-group [meaning]="m" />
+}

@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
-import { ApiService } from './api.service';
-import { ApiUrls } from '../constants/api-urls';
-import { DictionaryEntry } from '../../models/dictionary-model';
+import { ApiService } from '@core/services/api.service';
+import { ApiUrls } from '@core/constants/api-urls';
+import { DictionaryEntry } from '@models/dictionary-model';
 
 @Injectable({ providedIn: 'root' })
 export class DictionaryService {
