@@ -1,0 +1,64 @@
+<section class="px-4 py-10 sm:py-14 md:py-16">
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-3">
+      Your Smart English Dictionary
+    </h1>
+    <p class="text-gray-600 dark:text-gray-300 mb-6">
+      Search meanings, pronunciations, and synonyms instantly.
+    </p>
+
+    <div class="mt-4 flex items-stretch max-w-xl mx-auto">
+      <input
+        type="text"
+        class="flex-1 rounded-l-full border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--p-primary-color)]"
+        placeholder="Type a word..."
+        [value]="term()"
+        (input)="onInput($any($event.target).value)"
+        (keyup.enter)="submit()"
+        aria-label="Search word"
+      />
+      <button
+        type="button"
+        class="rounded-r-full bg-[var(--p-primary-color)] text-white px-5 py-3 font-medium hover:opacity-90"
+        (click)="submit()"
+        aria-label="Search"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="px-4 pb-12">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-xl font-semibold mb-4">Did You Know?</h2>
+
+    @if (factsLoading()) {
+    <div class="py-6 text-gray-600 dark:text-gray-300">Loading facts…</div>
+    } @else if (factsError()) {
+    <div class="py-6 text-red-600">{{ factsError() }}</div>
+    } @else if (facts().length === 0) {
+    <div class="py-6 text-gray-600 dark:text-gray-300">No facts available.</div>
+    } @else {
+    <p-carousel
+      [value]="facts()"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="8000"
+      styleClass="rounded-lg"
+    >
+      <ng-template let-fact pTemplate="item">
+        <div
+          class="p-4 md:p-6 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700"
+        >
+          @if (fact.title) {
+          <h3 class="text-base font-semibold mb-2">{{ fact.title }}</h3>
+          }
+          <p class="text-lg">{{ fact.fact }}</p>
+        </div>
+      </ng-template>
+    </p-carousel>
+    }
+  </div>
+</section>

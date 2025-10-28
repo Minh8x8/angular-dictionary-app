@@ -1,0 +1,47 @@
+<section class="mb-6">
+  <h2 class="text-lg font-medium mb-3 capitalize">{{ meaning().partOfSpeech }}</h2>
+  <ul class="list-disc ml-5 space-y-3">
+    @for (d of topDefinitions(); let i = $index; track i) {
+    <li>
+      <app-definition-item [def]="d" />
+    </li>
+    }
+  </ul>
+
+  @if (hasExtra()) {
+  <div class="mt-2">
+    @if (!expanded()) {
+    <button
+      type="button"
+      class="hover:underline text-sm cursor-pointer"
+      style="color: var(--p-primary-color)"
+      (click)="toggleExtra()"
+    >
+      Show more definitions ({{ extraDefinitions().length }})
+    </button>
+    } @else {
+    <div class="space-y-3">
+      <ul class="list-disc ml-5 space-y-3">
+        @for (d of extraDefinitions(); let j = $index; track j) {
+        <li>
+          <app-definition-item [def]="d" />
+        </li>
+        }
+      </ul>
+      <button
+        type="button"
+        class="hover:underline text-sm cursor-pointer"
+        style="color: var(--p-primary-color)"
+        (click)="toggleExtra()"
+      >
+        Show fewer definitions
+      </button>
+    </div>
+    }
+  </div>
+  } @if (meaning().synonyms.length || meaning().antonyms.length) {
+  <div class="mt-3">
+    <app-synonym-antonym-list [synonyms]="meaning().synonyms" [antonyms]="meaning().antonyms" />
+  </div>
+  }
+</section>

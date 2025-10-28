@@ -1,0 +1,25 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Use CSS mask to color the logo with the theme primary color */
+.logo-mark {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  background-color: var(--p-primary-color, var(--p-primary-500, #6366f1));
+  -webkit-mask: url('/dict-logo.png') no-repeat center / contain;
+  mask: url('/dict-logo.png') no-repeat center / contain;
+}
+
+.app-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  background-color: var(--p-primary-500, #6366f1);
+  color: white;
+}

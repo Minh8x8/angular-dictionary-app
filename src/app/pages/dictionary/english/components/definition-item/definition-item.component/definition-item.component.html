@@ -1,0 +1,8 @@
+<div class="space-y-1">
+  <div class="leading-relaxed">
+    {{ def().definition }}
+  </div>
+  @if (def().example) {
+  <div class="text-gray-600 dark:text-gray-300 italic">“{{ def().example }}”</div>
+  }
+</div>

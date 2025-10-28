@@ -1,4 +1,5 @@
 export const environment = {
-  production: true,
-  apiUrl: 'https://api.dictionaryapi.dev/api/v2/entries/en',
+  production: false,
+  // Base API URL only (no path suffix). Endpoint paths come from ApiUrls.
+  apiUrl: 'https://api.dictionaryapi.dev/api/v2',
 };

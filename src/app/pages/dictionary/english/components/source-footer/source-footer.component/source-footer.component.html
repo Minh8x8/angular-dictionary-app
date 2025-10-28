@@ -1,0 +1,14 @@
+@if (urls()?.length) {
+<div class="mt-8 border-t pt-4">
+  <div class="text-sm text-gray-600 dark:text-gray-300 mb-2">Source</div>
+  <ul class="list-disc ml-5 space-y-1">
+    @for (u of urls()!; track u) {
+    <li>
+      <a [href]="u" target="_blank" rel="noopener" class="text-primary-500 hover:underline">{{
+        u
+      }}</a>
+    </li>
+    }
+  </ul>
+</div>
+}

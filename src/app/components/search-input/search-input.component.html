@@ -1,0 +1,11 @@
+<p-inputgroup class="w-full">
+  <p-button label="Search" (onClick)="search()" [disabled]="!term().trim()" />
+  <input
+    pInputText
+    placeholder="Keyword"
+    [value]="term()"
+    (input)="term.set($any($event.target).value)"
+    (keyup.enter)="search()"
+    aria-label="Search keyword"
+  />
+</p-inputgroup>

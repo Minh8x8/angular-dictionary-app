@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "An infinity sign is called a “lemniscate.”",
+    "fact": "The term refers to a plane curve in which two loops meet at a central point, forming a sideways figure-eight. Derived from the Latin word for 'with hanging ribbons'."
+  },
+  {
+    "id": 2,
+    "title": "The longest English word is nearly 190,000 letters.",
+    "fact": "It’s the chemical name of Titin, the largest known protein, starting with 'Methionylthreonylthreonyl...' and stretching for tens of thousands of letters."
+  },
+  {
+    "id": 3,
+    "title": "The longest word in a major dictionary has 45 letters.",
+    "fact": "‘Pneumonoultramicroscopicsilicovolcanoconiosis’ refers to a lung disease caused by silica dust. It was coined in the 1930s just to become the longest word."
+  },
+  {
+    "id": 4,
+    "title": "The word 'bankrupt' means 'broken bench'.",
+    "fact": "From Italian 'banca rotta', meaning ‘broken bench’ — an old custom where a money dealer’s bench was broken when they lost their funds."
+  },
+  {
+    "id": 5,
+    "title": "There’s a word for all things breakfast.",
+    "fact": "‘Jentacular’ means ‘pertaining to breakfast’."
+  },
+  {
+    "id": 6,
+    "title": "The word 'heroin' was trademarked by Bayer.",
+    "fact": "Bayer sold heroin as an over-the-counter drug in the late 19th century. The name came from the German word 'heroisch' (powerful)."
+  },
+  {
+    "id": 7,
+    "title": "A single piece of confetti is a 'confetto'.",
+    "fact": "‘Confetti’ is plural; one piece is a ‘confetto’."
+  },
+  {
+    "id": 8,
+    "title": "‘Schoolmaster’ is an anagram of ‘the classroom’.",
+    "fact": "Other examples include 'Astronomers' = 'Moon starers' and 'Clint Eastwood' = 'Old West Action'."
+  },
+  {
+    "id": 9,
+    "title": "‘Walrus’ may mean ‘whale-horse’.",
+    "fact": "It comes from Old English 'horschwael', literally meaning 'horse whale'."
+  },
+  {
+    "id": 10,
+    "title": "‘Penguin’ means ‘white head’.",
+    "fact": "Derived from Welsh 'pen' (head) and 'gwyn' (white). Originally referred to the now-extinct great auk."
+  },
+  {
+    "id": 11,
+    "title": "‘Adultery’ and ‘adult’ have different origins.",
+    "fact": "‘Adult’ comes from Latin 'adolescere' (to grow up); ‘adultery’ comes from 'adulterare' (to corrupt)."
+  },
+  {
+    "id": 12,
+    "title": "‘Crwth’ and ‘cwtch’ are words without vowels.",
+    "fact": "Both are Welsh words that treat ‘w’ as a vowel."
+  },
+  {
+    "id": 13,
+    "title": "There’s a word for 'the day before yesterday'.",
+    "fact": "‘Nudiustertian’ means the day before yesterday."
+  },
+  {
+    "id": 14,
+    "title": "‘Ambulance’ means 'walking hospital'.",
+    "fact": "From Latin 'ambulare' (to walk); Napoleon used 'hopital ambulant' for mobile battlefield hospitals."
+  },
+  {
+    "id": 15,
+    "title": "‘Funk’ originated in Elizabethan England.",
+    "fact": "From Old French 'funkier', meaning 'to blow smoke on'. Originally described a musty smell."
+  },
+  {
+    "id": 16,
+    "title": "‘Bogus’ was once a noun.",
+    "fact": "Originally referred to a counterfeit coin-making machine."
+  },
+  {
+    "id": 17,
+    "title": "The opposite of déjà vu is ‘jamais vu’.",
+    "fact": "French for 'never seen', describing when something familiar feels foreign."
+  },
+  {
+    "id": 18,
+    "title": "‘Bellwether’ comes from sheep herding.",
+    "fact": "A bell was hung on the lead sheep (‘wether’), which guided the rest."
+  },
+  {
+    "id": 19,
+    "title": "Only one English word has X, Y, and Z in order.",
+    "fact": "That word is ‘hydroxyzine’, an antihistamine medication."
+  },
+  {
+    "id": 20,
+    "title": "‘Pandemonium’ was invented by John Milton.",
+    "fact": "He coined it in ‘Paradise Lost’ as the name of Hell’s capital."
+  }
+]
