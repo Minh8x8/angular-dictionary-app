@@ -1,27 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { NgOptimizedImage } from '@angular/common';
-
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PrimeImportsModule } from './prime-imports';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    RouterLink,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    NgOptimizedImage,
-  ],
+  imports: [PrimeImportsModule, RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   host: {
     class: 'app-root',
   },
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class App {
-  title = signal('Dictionary App');
-  currentYear = signal(new Date().getFullYear());
-}
+export class App {}

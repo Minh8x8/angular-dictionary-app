@@ -1,50 +1,14 @@
 <div class="app-container">
-  <header class="sticky-header">
-    <mat-toolbar class="header-toolbar">
-      <div class="logo-container">
-        <img
-          ngSrc="dictionary-logo.jpg"
-          alt="Dictionary Logo"
-          width="40"
-          height="40"
-          priority
-          class="logo-img"
-        />
-        <a class="app-title" routerLink="/home">{{ title() }}</a>
-      </div>
-      <span class="spacer"></span>
-      <nav class="nav-links">
-        <a mat-button routerLink="/home" routerLinkActive="active">Home</a>
-        <a mat-button routerLink="/about" routerLinkActive="active">About</a>
-      </nav>
-    </mat-toolbar>
-  </header>
+  <!-- Header -->
+  <app-header />
 
-  <main class="main-content">
+  <!-- Main content -->
+  <main class="main-content container mx-auto w-full max-w-7xl">
     <router-outlet />
   </main>
 
+  <!-- Footer -->
   <footer>
-    <mat-toolbar class="footer-toolbar">
-      <div class="footer-content">
-        <div class="footer-links">
-          <a mat-button href="https://github.com/angular/angular" target="_blank" rel="noopener">
-            <mat-icon>code</mat-icon>
-            GitHub
-          </a>
-          <a mat-button href="https://twitter.com/angular" target="_blank" rel="noopener">
-            <mat-icon>public</mat-icon>
-            Twitter
-          </a>
-          <a mat-button href="https://angular.dev" target="_blank" rel="noopener">
-            <mat-icon>description</mat-icon>
-            Docs
-          </a>
-        </div>
-        <div class="footer-copyright">
-          <span>© {{ currentYear() }} Dictionary App. All rights reserved.</span>
-        </div>
-      </div>
-    </mat-toolbar>
+    <app-footer />
   </footer>
 </div>
